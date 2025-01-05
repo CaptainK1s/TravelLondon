@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"> <!-- Allows the ScrollView to stretch and fill the screen if needed -->
+
+    <!-- Your existing layout goes here -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <include
+            layout="@layout/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select how you wish to travel!"
+            android:layout_gravity="center" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupTransportation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioBoat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boat" />
+
+            <RadioButton
+                android:id="@+id/radioTrain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Train" />
+
+            <RadioButton
+                android:id="@+id/radioPlane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Airplane" />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/spinnerDestinations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvSelectedDestination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selected Destination Info will appear here"
+            android:paddingTop="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageLondon"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/london"
+            android:contentDescription="London Bridge!"/>
+
+    </LinearLayout>
+
+</ScrollView>
